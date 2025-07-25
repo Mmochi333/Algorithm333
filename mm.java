@@ -1,14 +1,23 @@
 import java.util.Scanner;
+
 public class mm {
-    public static void main (String args[]) {
-        // int num1 = 4;
-        // int num2 = 6;
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter num1 ");
-        int num1 = scanner.nextInt();
-        System.out.print("Enter num2 ");
-        int num2 = scanner.nextInt();
-        int sum = num1+num2;
-        System.out.println("Sum is="+sum);
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in); 
+
+        double sum = 0; 
+        int numberOfInputs = 5; 
+        System.out.println("Please enter 5 numbers:"); 
+
+        for (int i = 1; i <= numberOfInputs; i++) {
+            System.out.print("Enter number " + i + ": "); 
+            int num = scanner.nextInt();
+            sum = sum + num; 
+        }
+
+        double average = sum / numberOfInputs; 
+        System.out.println("The sum of the 5 numbers is: " + sum);
+        System.out.println("The average of the 5 numbers is: " + average);
+
+        scanner.close(); 
     }
 }
